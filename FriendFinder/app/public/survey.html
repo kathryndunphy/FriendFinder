@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="container">
 
-        <div class="jumbotron">
+    <div class="container">
+        <!-- <div class="jumbotron"> -->
             <h1 class="display-4">Psychological Assessment</h1>
             <p class="lead">Simply complete the survey below to be matched with another human</p>
             <hr class="my-4">
@@ -24,28 +24,12 @@
             <form>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Full Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Photo of Yourself</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Add Photo URL">
-                </div>
-                <!-- <div class="form-group">
-                                  <label for="formGroupExampleInput2">Another label</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-                                </div> -->
-                <!-- <div class="input-group mb-3">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02" placeholder="Add a Photo">
-                        <label class="custom-file-label" for="inputGroupFile02">Choose file/Input URL</label>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                    </div>
-                </div> -->
-                <hr>
-                <br>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
 
+                    <label for="formGroupExampleInput">Photo of Yourself</label>
+                    <input type="text" class="form-control" id="photo" placeholder="Add Photo URL">
+                </div>
+                <hr><br>
 
                 <div>
                     <h4>Question 1 about something important?</h4>
@@ -143,13 +127,31 @@
             <p class="lead">
                 <a class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
             </p>
-        </div>
+        <!-- </div> -->
 
     </div>
 
+    <script text/JavaScript>
+    $('#submit').click(function(){
+        //if using a class ".questions" to pull all select values, add and compare to median value of 10 & 50
+        $(.questions)
+    });
+    $("select").on("click", function(){
+        var answers = $(this).val();
+
+        $(this).val()
+    });
+    //capture user input and selections
+    var userInput = {
+        name: $("#name").val(),
+        //photo
+        answers: $("#q1")
+    }
+
+    </script>
 
     <!-- need code pulling in answer values, adding them up connnecting to friend.js and 
-        comparing them to friends.js stats -->
+comparing them to friends.js stats -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
