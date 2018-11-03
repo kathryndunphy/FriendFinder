@@ -142,9 +142,11 @@
     </div>
 
 
-    <script text/JavaScript> //using jQuery to reference data from out server and display //i have no clue what i'm
+    <script text/JavaScript>
+    //using jQuery to reference data from survey and display //i have no clue what i'm
         doing $('#submit').("click", function (event) {
-            event.preventDefault(); //capture user input and create object 
+            //use preventDefault so click doesn't navigate and we can utilize modal pop-up
+            event.preventDefault(); 
             var userProfile = {
                 name: $("#name").val(), 
                 photo: $("#photo").val(), 
@@ -160,7 +162,15 @@
                     $("#q9").val(),
                     $("#q10").val()
                     ]
-            }; //if using a class ".questions" to pull all select values, add and // compare to median
+            }; 
+create code that insures the form fields and questions are all answered. send error message to complete form if not or most on
+
+create a userProfile object to be passed through the apiroutes to the friend.js  the apiroutes file includes data manipulation to apply type-configuartion and comparison
+so that the frontend info can be referenced to the backend info how we'd like it to (more info on apiroutes file)
+
+gotta figure out the whole modal thing
+            
+            //if using a class ".questions" to pull all select values, add and // compare to median
             value of 10 & 50 $(.questions)
         }); $("select").on("click", function () {
             var answers = $(this).val();
